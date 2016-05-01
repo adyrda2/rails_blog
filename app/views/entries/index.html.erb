@@ -1,0 +1,31 @@
+<div class="container">
+  <p id="notice"><%= notice %></p>
+
+  <h1>Listing Entries</h1>
+  <p class="test">OK</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Content</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @entries.each do |entry| %>
+        <tr>
+          <td><%= entry.content %></td>
+          <td><%= link_to 'Show', entry %></td>
+          <td><%= link_to 'Edit', edit_entry_path(entry) %></td>
+          <td><%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' }, 
+          :remote => true, :class => 'delete_entry' %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+  <div class="new_entry">
+    <p class="entry_button"><%= link_to 'New Entry', new_entry_path, :remote => true, :class => 'create_entry' %></p>
+  </div>
+</div>
