@@ -1,9 +1,9 @@
-* {
+/** {
 	margin: 0;
 }
 
 header {
-	background-color: #4B494F;
+	background-color: #FAFAFA;
 	height: 5em;
 }
 
@@ -18,6 +18,6 @@ header p {
 .container {
 	padding-left: 10em;
 	margin-right: auto;
-	background-color: #FAFAFA;
+	background-color: #00AEEF;
 
-}
+}*/
