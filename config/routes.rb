@@ -3,6 +3,8 @@ Rails.application.routes.draw do
     resources :comments
   end
   root 'entries#index'
+  require 'sidekiq/web'
+  mount Sidekiq::Web, at: '/sidekiq'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,0 +1,2 @@
+class ArchivedEntriesController < ApplicationController
+end
