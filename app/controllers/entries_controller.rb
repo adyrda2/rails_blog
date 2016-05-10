@@ -63,8 +63,6 @@ class EntriesController < ApplicationController
       format.js   { render :layout => false }
 
     end
-
-
   end
 
   private
