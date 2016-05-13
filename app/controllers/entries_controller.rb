@@ -27,15 +27,9 @@ class EntriesController < ApplicationController
     @entry = Entry.new(entry_params)
 
     respond_to do |format|
-      if @entry.save
-        format.html { redirect_to @entry, notice: 'Entry was successfully created.' }
-        format.json { render :show, status: :created, location: @entry }
-        format.js   { render :layout => false }
-      else
-        format.html { render :new }
-        format.json { render json: @entry.errors, status: :unprocessable_entity }
-        format.js   { render :layout => false }
-      end
+      format.html { redirect_to root_url }
+      format.js
+      @entry.save
     end
   end
 
@@ -46,6 +40,7 @@ class EntriesController < ApplicationController
       if @entry.update(entry_params)
         format.html { redirect_to @entry, notice: 'Entry was successfully updated.' }
         format.json { render :show, status: :ok, location: @entry }
+        format.js
       else
         format.html { render :edit }
         format.json { render json: @entry.errors, status: :unprocessable_entity }

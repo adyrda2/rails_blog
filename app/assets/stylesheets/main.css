@@ -1,29 +1,14 @@
 html {
 	color: #4B494F;
 	background-color: #00AEEF;
-
 }
 
 * {
 	margin: 0;
 }
 
-header {
-	background-color: #00AEEF;
-	height: 5em;
-}
-
-header p {
-	color: #E3E534;
-	font-size: 26px;
-	padding-left: 2em;
-	padding-top: 1em;
-}
-
 .container {
-
 	margin-right: auto;
-	
 }
 
 nav{

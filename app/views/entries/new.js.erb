@@ -1,22 +1,4 @@
-$(".new_entry").html("<%= j render partial: 'form' %>");
-// $('.entry_form').on('submit','.new_entry', function(event){
-// 	event.preventDefault();
-//       var $form = $( this )
-// 	  var formData = $(this).serialize();
-// 	  var url = "/entries"
-//       var request = $.ajax({
-//         url: url ,
-//         method: "post",
-//         data: formData,
-//         dataType: 'json'
-//     })
-
-//   request.success(function(response){
-//       $('tr').closest().append(response.content);
-//       $("#content").val("");
-  
-//     })
-// });
-
+$('.entry_button').hide()
+$(".container").append('<%= j render("form") %>')
 
 
