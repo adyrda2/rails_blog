@@ -27,8 +27,8 @@ class EntriesController < ApplicationController
     @entry = Entry.new(entry_params)
 
     respond_to do |format|
-      format.html { redirect_to root_url }
-      format.js
+      format.html 
+      format.js 
       @entry.save
     end
   end
