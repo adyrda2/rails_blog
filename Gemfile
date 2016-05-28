@@ -25,6 +25,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'sidekiq'
 gem 'sinatra', require: false
 gem 'slim'
+gem 'devise'
+
 
 
 # Use ActiveModel has_secure_password
