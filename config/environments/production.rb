@@ -75,6 +75,7 @@ Rails.application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   # Do not dump schema after migrations.
+  Rails.application.routes.default_url_options[:host] = 'https://dry-wildwood-68370.herokuapp.com'
   config.active_record.dump_schema_after_migration = false
   config.action_mailer.smtp_settings = {
   address: "smtp.gmail.com",
