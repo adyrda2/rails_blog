@@ -75,18 +75,15 @@ Rails.application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   # Do not dump schema after migrations.
+  config.active_record.dump_schema_after_migration = false
+  config.action_mailer.smtp_settings = {
+  address: "smtp.gmail.com",
+  port: 587,
+  domain: "https://dry-wildwood-68370.herokuapp.com",
+  authentication: "plain",
+  enable_starttls_auto: true,
+  user_name: ENV["GMAIL_USERNAME"],
+  password: ENV["GMAIL_PASSWORD"]
+}
 
-
-   config.action_mailer.default_url_options = {:host => 'https://dry-wildwood-68370.herokuapp.com/', :protocol => 'http'} #I've also tried it without ":protocol => 'http'"
-   config.action_mailer.raise_delivery_errors = true
-   config.action_mailer.delivery_method = :smtp
-   config.action_mailer.perform_deliveries = true
-   config.action_mailer.smtp_settings = {
-     :address => "smtp.gmail.com",
-     :port => 587,
-     :authentication => :plain,   
-     :enable_starttls_auto => true,  
-     :user_name: ENV["GMAIL_USERNAME"],
-     :password: ENV["GMAIL_PASSWORD"]
-   }
 end
