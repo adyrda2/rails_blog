@@ -1,14 +1,11 @@
-<div class="container">
-<h1>Ok</h1>
-  <p id="notice"><%= notice %></p>
-  <br>
-  <div class="new_entry">
-    <p class="entry_button"><%= link_to 'New Entry', new_entry_path, :remote => true, :class => 'create_entry' %></p>
-  </div>
-  <div class="all_entries">
-    <%@entries.each do |entry| %>
-    <p><%=entry.content %></p>
-    <% end %>
-  </div>
-  <p> entries count <%= @entries.count %> </p>
+<p id="notice"><%= notice %></p>
+<div class="new_entry">
+  <p class="entry_button"><%= link_to 'New Entry', new_entry_path, :class => 'create_entry' %></p>
+</div>
+<div class="all_entries">
+  <%@entries.each do |entry| %>
+  <p><%=entry.title%><p>
+  <p><%=entry.content %></p>
+  <% end %>
+<p> entries count <%= @entries.count %> </p>
 </div>
