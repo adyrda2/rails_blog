@@ -1,0 +1,17 @@
+<div class="about_me">
+<img src ="/assets/chi2.jpg">
+
+  <h1> Angela Dyrda </h1>
+  <ul class="characteristics">
+    <li><p> An aspiring web master. </p></li>
+    <li><p> iOS/Swift Developer. </p></li>
+    <li><p> Rails enthusiast. </p></li>
+  </ul>
+    <div class="button_font"><button> <a href ="/entries"> BLOG ENTRIES 😊</a> </button></div>
+  <% if current_user && current_user.admin == true %>
+  <% if user_signed_in? %>
+    <%= link_to 'logout', destroy_user_session_path, method: :delete%>
+  <% else %>
+    <%= link_to 'login', new_user_session_path %>
+  <%end%>
+  <%end%>
