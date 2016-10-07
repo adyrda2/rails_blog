@@ -1,1 +1,1 @@
-# Rails_App
+# rails_blog
