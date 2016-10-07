@@ -26,8 +26,7 @@ gem 'sidekiq'
 gem 'sinatra', require: false
 gem 'slim'
 gem 'devise'
-
-
+gem 'rails_admin'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -42,13 +41,14 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'factory_girl_rails'
+  gem 'pry'
 
 end
 
 group :production do
   gem 'rails_12factor'
   gem 'pg'
-end 
+end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
@@ -62,4 +62,3 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-
