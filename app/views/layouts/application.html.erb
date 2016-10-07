@@ -6,23 +6,20 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<header> 
-	<% if user_signed_in? %>
-		<%= link_to 'logout', destroy_user_session_path, method: :delete%>
-	<% else %> 
-		<%= link_to 'login', new_user_session_path %>
-	<%end%>
-	<p> Angela Dyrda </p>
+<header>
+
 	<nav>
-		<ul>
-			<li> Projects </li>
-			<li> Resume </li>
-			<li> Blog </li>
+		<ul class="social_media">
+      <li> <img src="/assets/linkedin.png"></li>
+      <li> <img src="/assets/twitter.png"></li>
+      <li> <img src="/assets/github.png"></li>
 		</ul>
 	</nav>
+
 </header>
 <body>
 
+</div>
 <%= yield %>
 
 </body>
