@@ -25,13 +25,12 @@ class EntriesController < ApplicationController
   # POST /entries.json
   def create
     @entry = Entry.new(entry_params)
-
-    respond_to do |format|
-      format.html 
-      format.js 
-      @entry.save
-    end
+    if @entry.save
+    redirect_to entries_path
+  else
+    render 'new'
   end
+end
 
   # PATCH/PUT /entries/1
   # PATCH/PUT /entries/1.json
@@ -68,6 +67,6 @@ class EntriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def entry_params
-      params.require(:entry).permit(:content)
+      params.require(:entry).permit(:title, :content)
     end
 end
